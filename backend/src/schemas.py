@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List
+from typing import Dict
 
 class LoginRequest(BaseModel):
     username: str
@@ -10,7 +10,7 @@ class EmployeeResponse(BaseModel):
     name: str
     position: str
     avatar_url: str
-    skills: List[str]
+    skills: Dict[str, int]
 
     class Config:
         from_attributes = True
