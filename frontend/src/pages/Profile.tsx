@@ -29,10 +29,10 @@ const options = {
   scales: {
     r: {
       min: 0,
-      max: 100,
+      max: 10,
       beginAtZero: true,
       ticks: {
-        stepSize: 20,
+        stepSize: 2,
         color: '#666',
         font: {
           size: 12
@@ -227,7 +227,7 @@ const Profile: React.FC = () => {
                   >
                     <ListItemText 
                       primary={skill}
-                      secondary={`Proficiency: ${score}%`}
+                      secondary={`Proficiency: ${score}`}
                       primaryTypographyProps={{
                         fontWeight: 600,
                         color: '#1a237e'
