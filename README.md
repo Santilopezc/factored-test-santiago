@@ -15,3 +15,33 @@ This app allows users to:
 The app consists of:
 1. A **backend** built with FastAPI.
 2. A **frontend** built with React.
+
+## **How to Run Locally**
+
+### **Step 1: Clone the Repository**
+```bash
+git clone <repository-url>
+cd <project-folder>
+```
+### **Step 2: Run the backend**
+1. Navigate to the backend directory
+```bash
+cd backend/src
+```
+2. Create and activate a virtual environment, then install dependencies and start the server
+```bash
+pip install -r requirements.txt
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
+### **Step 3: Run the Frontend**
+1. Open a new terminal and go to the directory
+```bash
+cd frontend
+```
+2. Install dependencies and start the development server:
+```bash
+npm install
+npm run dev
+```
+3. Acess the app in the local host.
+
