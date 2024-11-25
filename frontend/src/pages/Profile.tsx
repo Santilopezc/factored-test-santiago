@@ -45,7 +45,7 @@ const options = {
       pointLabels: {
         font: {
           size: 14,
-          weight: '600'
+          weight: 600
         },
         color: '#1a237e'
       }
@@ -60,7 +60,7 @@ const options = {
       padding: 12,
       titleFont: {
         size: 14,
-        weight: 'bold'
+        weight: 'bold' as 'bold'
       },
       bodyFont: {
         size: 13
@@ -72,7 +72,14 @@ const options = {
 const Profile: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const [employee, setEmployee] = useState<any>(null);
+  interface Employee {
+    avatar_url: string;
+    name: string;
+    position: string;
+    skills: { [key: string]: number };
+  }
+  
+  const [employee, setEmployee] = useState<Employee | null>(null);
 
   useEffect(() => {
     getEmployee(Number(id))

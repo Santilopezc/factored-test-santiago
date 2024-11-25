@@ -14,7 +14,11 @@ const Login: React.FC = () => {
       localStorage.setItem("employee", JSON.stringify(employee));
       navigate("/profiles"); // Redirect to the profile page
     } catch (err) {
-      setError(err.message || "Login failed");
+      if (err instanceof Error) {
+        setError(err.message || "Login failed");
+    } else {
+        setError("Login failed");
+      }
     }
   };
 
