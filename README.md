@@ -44,5 +44,8 @@ npm install
 npm run dev
 ```
 3. Acess the app in the local host.
+
+### **Using the app**
+The user for the app is **factoredai**
 ### **Troubleshooting**
 1. If you have trouble with the frontend connecting to the backend, you can check in /frontend/src/services/api.tsx. Check that the route connecting to the API, matches the route for the backend in your machine.
