@@ -31,7 +31,7 @@ cd backend/src
 2. Create and activate a virtual environment, then install dependencies and start the server
 ```bash
 pip install -r requirements.txt
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
+fastapi dev main.py
 ```
 ### **Step 3: Run the Frontend**
 1. Open a new terminal and go to the directory
